@@ -21,6 +21,15 @@ MyBinarySearchTree<Integer> myBinarySearchTree = new MyBinarySearchTree<>();
         myBinarySearchTree.add(32);
         myBinarySearchTree.add(20);
 
+
+    }public static void traversePreOrder(TreeNode<Integer> currentNode) {
+        if (currentNode != null) {
+            System.out.print(currentNode.getData() + " ");
+            traversePreOrder(currentNode.getLeftChild());
+            traversePreOrder(currentNode.getRightChild());
         }
+    }
+
+
     }
 
