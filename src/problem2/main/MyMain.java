@@ -20,7 +20,11 @@ MyBinarySearchTree<Integer> myBinarySearchTree = new MyBinarySearchTree<>();
         myBinarySearchTree.add(76);
         myBinarySearchTree.add(32);
         myBinarySearchTree.add(20);
-
+        System.out.println("Traverse the tree in preOrder:");
+        traversePreOrder(myBinarySearchTree.getRoot());
+        System.out.println();
+        System.out.println("Traverse the tree in postOrder:");
+        traversePostOrder(myBinarySearchTree.getRoot());
 
     }public static void traversePreOrder(TreeNode<Integer> currentNode) {
         if (currentNode != null) {
