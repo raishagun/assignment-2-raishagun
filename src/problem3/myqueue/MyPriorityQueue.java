@@ -7,8 +7,16 @@
 package problem3.myqueue;
 
 import problem3.adt;
+import problem3.node.Node;
 
 public class MyPriorityQueue<E> implements adt<E> {
+
+    private int size = 0;
+    private Node<E> front;
+    private Node<E> rear;
+
+
+
 
     @Override
     public void add(E data) {
