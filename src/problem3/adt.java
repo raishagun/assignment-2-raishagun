@@ -1,4 +1,5 @@
 package problem3;
 
-public interface adt {
+public interface adt<E> {
+
 }
