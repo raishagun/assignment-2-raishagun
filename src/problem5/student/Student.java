@@ -5,6 +5,9 @@
  *  Time: 7:06 PM
  */
 package problem5.student;
+
+import java.util.Objects;
+
 // to store student information and properties
 public class Student {
     private int rollNumber;
@@ -40,5 +43,22 @@ public class Student {
                 "rollNumber=" + rollNumber +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        boolean flag = false;
+        Student student = (Student) o;
+        if (rollNumber > student.rollNumber) {
+            return true;
+        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        return flag;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rollNumber);
     }
 }
