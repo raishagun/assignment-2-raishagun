@@ -15,11 +15,11 @@ public class MyMain {
 
 MyBinarySearchTree<Integer> myBinarySearchTree = new MyBinarySearchTree<>();
 
-        myBinarySearchTree.add(12);
+        myBinarySearchTree.add(31);
         myBinarySearchTree.add(45);
         myBinarySearchTree.add(76);
         myBinarySearchTree.add(32);
-        myBinarySearchTree.add(20);
+        myBinarySearchTree.add(34);
         System.out.println("Traverse the tree in preOrder:");
         traversePreOrder(myBinarySearchTree.getRoot());
         System.out.println();
