@@ -8,5 +8,8 @@ public interface adt<E> {
 
     E remove();
 
+    //extract the element without removing
+
+    E peek();
 
 }
