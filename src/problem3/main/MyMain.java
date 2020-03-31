@@ -20,5 +20,6 @@ public class MyMain {
             myPriorityQueue.add(new Student(28, "palak"));
             System.out.println(myPriorityQueue);
         }
+
     }
 
