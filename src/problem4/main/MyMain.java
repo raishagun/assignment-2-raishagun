@@ -25,6 +25,7 @@ public class MyMain {
         for (String s1 : ar) {
             myBinarySearchTree.add(Integer.parseInt(s1));
         }
+        MyQueue<Integer> myQueue = new MyQueue<>();
     }
 }
 
