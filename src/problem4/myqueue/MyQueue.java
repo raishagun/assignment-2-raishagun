@@ -22,7 +22,7 @@ public class MyQueue<E> implements MyQueueADT<E> {
 
     @Override
     public void enqueue(E data) {
-        Node<E> node = new Node<>();
+        Node<E> node = new Node<E>(data);
 
 
     }
@@ -49,7 +49,13 @@ public class MyQueue<E> implements MyQueueADT<E> {
     private static class Node<E> {
         E data;
         Node<E> next;
+        public Node(E data) {
+            this.data = data;
+        }
 
+        public Node(Node<E> next) {
+            this.next = next;
+        }
 
     }
     }
