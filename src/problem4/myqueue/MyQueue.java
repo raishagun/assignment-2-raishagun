@@ -7,7 +7,6 @@
 package problem4.myqueue;
 // to create queue to store pre - order successor
 
-import problem3.node.Node;
 import problem4.adt.MyQueueADT;
 
 public class MyQueue<E> implements MyQueueADT<E> {
@@ -23,7 +22,8 @@ public class MyQueue<E> implements MyQueueADT<E> {
 
     @Override
     public void enqueue(E data) {
-        Node<E> node = new Node<>(data);
+        Node<E> node = new Node<>();
+
 
     }
 
@@ -46,4 +46,11 @@ public class MyQueue<E> implements MyQueueADT<E> {
     public boolean isEmpty() {
         return false;
     }
-}
+    private static class Node<E> {
+        E data;
+        Node<E> next;
+
+
+    }
+    }
+
