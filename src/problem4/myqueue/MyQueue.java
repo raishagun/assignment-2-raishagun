@@ -57,7 +57,7 @@ public class MyQueue<E> implements MyQueueADT<E> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
     private static class Node<E> {
         E data;
