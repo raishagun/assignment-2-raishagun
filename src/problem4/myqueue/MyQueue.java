@@ -46,7 +46,7 @@ public class MyQueue<E> implements MyQueueADT<E> {
 
     @Override
     public int getSize() {
-        return 0;
+        return size;
     }
 
     @Override
