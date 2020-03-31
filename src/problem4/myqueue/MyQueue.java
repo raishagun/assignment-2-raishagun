@@ -10,7 +10,7 @@ package problem4.myqueue;
 import problem3.node.Node;
 import problem4.adt.MyQueueADT;
 
-public class MyQueue<E> implements MyQueueADT {
+public class MyQueue<E> implements MyQueueADT<E> {
 
 
     private Node<E> front;
@@ -22,12 +22,13 @@ public class MyQueue<E> implements MyQueueADT {
 
 
     @Override
-    public void enqueue(Object data) {
+    public void enqueue(E data) {
+        Node<E> node = new Node<>(data);
 
     }
 
     @Override
-    public Object dequeue() {
+    public E dequeue() {
         return null;
     }
 
@@ -37,7 +38,7 @@ public class MyQueue<E> implements MyQueueADT {
     }
 
     @Override
-    public Object peek() {
+    public E peek() {
         return null;
     }
 
