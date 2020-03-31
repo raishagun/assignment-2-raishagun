@@ -22,7 +22,9 @@ public class MyMain {
         String s = sc.nextLine();
         String[] ar = s.split(" ");
         MyBinarySearchTree<Integer> myBinarySearchTree = new MyBinarySearchTree<>();
-
+        for (String s1 : ar) {
+            myBinarySearchTree.add(Integer.parseInt(s1));
+        }
     }
 }
 
