@@ -11,4 +11,8 @@ public interface MyQueueADT<E> {
 
     public E peek();  //method to get front element of queue
 
+    // a method to check whether queue is empty
+    public boolean isEmpty();
+
+
 }
