@@ -26,9 +26,31 @@ public class MyPriorityQueue<E> implements adt<E> {
         return response;
     }
 
+    private void sortedAdd(E data) {
+        Node<E> node = new Node<>(data);
+        for (int i = 0; i < size; i++) {
+            Node<E> node1 = getNode(size - i);
+            if (node.getData().equals(node1.getData())) {
+                node.setNext(node1.getNext());
+                node1.setNext(node);
+            } else {
+                continue;
+            }
+        }
+        rear = getNode(size);
+        front = getNode(1);
+        size++;
+    }
     @Override
     public void add(E data) {
-
+        if (size == 0) {
+            Node<E> node = new Node<E>(data, null);
+            front = node;
+            rear = node;
+            size++;
+        } else {
+            sortedAdd(data);
+        }
     }
 
     @Override
