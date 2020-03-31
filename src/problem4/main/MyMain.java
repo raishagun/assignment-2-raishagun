@@ -21,7 +21,8 @@ public class MyMain {
         System.out.println("Enter elements which are added in binary search tree");
         String s = sc.nextLine();
         String[] ar = s.split(" ");
+        MyBinarySearchTree<Integer> myBinarySearchTree = new MyBinarySearchTree<>();
+
     }
 }
-
 
