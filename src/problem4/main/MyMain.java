@@ -26,6 +26,17 @@ public class MyMain {
             myBinarySearchTree.add(Integer.parseInt(s1));
         }
         MyQueue<Integer> myQueue = new MyQueue<>();
-    }
+
 }
+    public static MyQueue traversePreOrder(TreeNode<Integer> currentNode, MyQueue<Integer> myQueue) {
+        if (currentNode != null) {
+            myQueue.enqueue(currentNode.getData());
+            System.out.print(currentNode.getData() + " ");
+            traversePreOrder(currentNode.getLeftChild(), myQueue);
+            traversePreOrder(currentNode.getRightChild(), myQueue);
+        }
+        return myQueue;
+    }
+    }
+
 
