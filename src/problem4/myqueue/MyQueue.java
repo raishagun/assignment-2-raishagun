@@ -23,6 +23,16 @@ public class MyQueue<E> implements MyQueueADT<E> {
     @Override
     public void enqueue(E data) {
         Node<E> node = new Node<E>(data);
+        if (front == null) {
+            node.next = null;
+            front = node;
+            rear = node;
+        } else {
+            node.setNext(rear.getNext());
+            rear.setNext(node);
+            rear = node;
+        }
+        size++;
 
 
     }
@@ -72,6 +82,11 @@ public class MyQueue<E> implements MyQueueADT<E> {
         public void setNext(Node<E> next) {
             this.next = next;
         }
+        public Node(E data, Node<E> next) {
+            this.data = data;
+            this.next = next;
+        }
+
     }
     }
 
