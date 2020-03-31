@@ -45,6 +45,10 @@ public class MyMain {
         }
         System.out.println("Data before deleting records");
         circularQueue.traverseQueue();
+        System.out.println("Removing zero backlog students");
+        circularQueue.removeZeroBacklogRecords();
+        System.out.println("Data after deleting records");
+        circularQueue.traverseQueue();
     }
 
 }
