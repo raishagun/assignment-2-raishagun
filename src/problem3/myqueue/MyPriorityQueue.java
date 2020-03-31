@@ -10,7 +10,21 @@ import problem3.adt;
 import problem3.node.Node;
 
 public class MyPriorityQueue<E> implements adt<E> {
+    private int size = 0;
+    private Node<E> front;
+    private Node<E> rear;
 
+    private Node<E> getNode(int index) {
+        Node<E> response = front;
+        if (index < 0 && index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else {
+            for (int i = 1; i < index && front != null; i++) {
+                response = response.getNext();
+            }
+        }
+        return response;
+    }
 
     @Override
     public void add(E data) {
