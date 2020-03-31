@@ -62,7 +62,7 @@ public class MyPriorityQueue<E> implements adt<E> {
 
     @Override
     public E peek() {
-        return null;
-    }
+        E data = front.getData();
+        return data;    }
 }
 
