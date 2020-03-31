@@ -7,32 +7,12 @@
 package problem5.circularqueue;
 
 import problem5.adt.CircularQueueADT;
+import problem5.node.Node;
 
 //to implement circular queue
-public class MyCircularQueue<E> implements CircularQueueADT<E> {
+public class MyCircularQueue<E> {
 
-    @Override
-    public void enqueue(E data) {
+    private Node front;
+    private Node rear;
 
-    }
-
-    @Override
-    public E dequeue() {
-        return null;
-    }
-
-    @Override
-    public E peek() {
-        return null;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
-
-    @Override
-    public int getSize() {
-        return 0;
-    }
 }
