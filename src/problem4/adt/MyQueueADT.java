@@ -8,6 +8,8 @@ public interface MyQueueADT<E> {
     //a method to remove element from front of queue
     public E dequeue();
 
+    public int getSize();    // to get size of queue
+
 
     public E peek();  //method to get front element of queue
 
